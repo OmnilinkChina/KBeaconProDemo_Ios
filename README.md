@@ -13,7 +13,8 @@ With this SDK, you can scan and configure the KBeacon device. The SDK include fo
 
 * KBCfgHandler：Responsible for configuring parameters related to KBeacon devices
 * DFU Library: Responsible for KBeacon firmware update.
-![avatar](https://github.com/omnilinkchina/KBeaconProDemo_Android/blob/main/kbeacon_class_arc.png?raw=true)
+![image](https://github.com/user-attachments/assets/3294f2ff-0958-4e78-bf2b-5629f7dc46f9)
+
 
 **Scanning Stage**
 

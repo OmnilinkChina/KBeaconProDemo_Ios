@@ -714,7 +714,8 @@ if commCfg.isSupportEBeacon()
 
 ##### 4.3.3.5 Intermittent advertisement
 In some cases, you may want Beacon to broadcast intermittently. For example, broadcasting for 5 seconds every 2 minutes.  
-![avatar](https://github.com/omnilinkchina/KBeaconProDemo_Android/blob/main/periodic_adv.png?raw=true)  
+![image](https://github.com/user-attachments/assets/777933d9-52bf-42e0-8fdc-6e23f47ea531)
+
 Example: Beacon broadcasts 5 seconds every 2 minutes in Slot1. The advertisement interval is 1 second in advertisement period. That is, the Beacon sleeps for 115 seconds and then broadcasts for 5 seconds.
 ```swift
 /**
@@ -890,7 +891,8 @@ func updateModifyParaToDevice()
   &nbsp;&nbsp; 1. Setting slot 0 to iBeacon advertisement(adv period = 211.25ms, trigger only adv = true).  
   &nbsp;&nbsp; 2. Add a single button trigger(Trigger No = 0, Trigger type = Btn single click, Action = advertisement, Adv slot = 0, Adv duration = 20).  
 	&nbsp;&nbsp;  
-	![avatar](https://github.com/omnilinkchina/KBeaconProDemo_Android/blob/main/only_adv_when_trigger.png?raw=true)
+	![image](https://github.com/user-attachments/assets/55596562-3727-4a2c-97d0-4c096ea58907)
+
 
  Example 2:  Trigger advertisment
 	&nbsp;For some scenario, we need to continuously monitor the KBeacon to ensure that the device was alive. The device usually broadcasting iBeacon1(UUID=xxx1) , and we want to trigger the broadcast iBeacon2(uuid=xxx2) when the button is pressed.   
@@ -899,7 +901,8 @@ func updateModifyParaToDevice()
 	&nbsp;We set an larger advertisement interval during alive advertisement and a short advertisement interval when trigger event happened, so we can achieve a balance between power consumption and triggers advertisement be easily detected.  
   &nbsp;&nbsp; 3. Add a single button trigger(Trigger No = 0, Trigger type = Btn single click, Action = advertisement, Adv slot = 1, Adv duration = 20).  
 	 &nbsp;&nbsp;
- 	![avatar](https://github.com/omnilinkchina/KBeaconProDemo_Android/blob/main/always_adv_with_trigger.png?raw=true)
+ 	![image](https://github.com/user-attachments/assets/766c5dcd-0989-4e80-a106-fb9c419790bd)
+
 
 
 
@@ -1055,7 +1058,8 @@ The KBeacon can start broadcasting when it detects motion. Also the app can sett
 Enabling motion trigger is similar to push button trigger, which will not be described in detail here.
 
 1. Enable motion trigger feature.  
- 	![avatar](https://github.com/omnilinkchina/KBeaconProDemo_Android/blob/main/motion_trigger_example.jpg?raw=true)
+ 	![image](https://github.com/user-attachments/assets/df7b23e0-bede-4d03-bbad-dcd18c25434a)
+
 
 ```swift
 // the iBeacon broadcast duration is 10 seconds.
@@ -1232,9 +1236,11 @@ func enableTHPeriodicallyTriggerRpt2App(_ sender: Any)
 The Cutoff trigger is suitable for tamper-evident beacon such as W3, W7. Or Door beacon such as the S1.  
 When the cut-off was detected, the beacon will send the specfic advertisement to the cloud/backend and trigger the alert, the administrator will response and help.  
 *Wristband Beacon  
-![avatar](https://github.com/omnilinkchina/KBeaconProDemo_Android/blob/main/wristbandCutoffTrigger.png?raw=true)  
+![image](https://github.com/user-attachments/assets/3d76ac84-c8ff-4136-b30a-b525496b336e)
+
 *CutoffWatchband  
-![avatar](https://github.com/omnilinkchina/KBeaconProDemo_Android/blob/main/doorCutoffTrigger.png?raw=true)  
+![image](https://github.com/user-attachments/assets/60395e13-94c9-451d-b480-bdbffa644720)
+
 * CutoffWatchband
 ```swift
 func onEnableCutoffTrigger()
@@ -1338,7 +1344,8 @@ For some KBecon devices with 3-axis accelerometers, you can set the device to tr
 Through the Tilt angle trigger, we can set an alarm when the product's tilt angle is below or above a specified threshold. Also, if the product remains in this tilted state, the trigger can also report it repeatedly.
 The tilt below angle range is 90 degrees to -90 degrees.
 When the product is placed upright, the angle is 90 degrees, and when the product is inverted, it is -90 degrees.  
-![avatar](https://github.com/omnilinkchina/KBeaconProDemo_Ios/blob/main/tilt_angle.png?raw=true)
+![image](https://github.com/user-attachments/assets/659a2f7d-ea53-4986-95ac-5c45d6840930)
+
 
  ```swift
 func enableAccAngleTrigger()
@@ -2094,7 +2101,8 @@ All command message between app and KBeacon are JSON format. Our SDK provide Has
  * KBDFUViewController: DFU UI activity and procedure about how to download latest firmware.
  * KBFirmwareDownload: Responsible for download the JSON or firmware from Omnilink China clouds.
  * DFUService: This DFU service that implementation Nordic's DFU library.  
- ![avatar](https://github.com/omnilinkchina/KBeaconProDemo_Ios/blob/main/kbeacon_dfu__ios_arc.png?raw=true)
+![image](https://github.com/user-attachments/assets/b768ee47-3982-47b0-9a5b-7db53045dfee)
+
 
  ### 5.1 Add DFU function to the application.
  Edit Podfile:
@@ -2122,7 +2130,7 @@ All command message between app and KBeacon are JSON format. Our SDK provide Has
  }
 
  ```
- If you want to known more details about getting the Device's latest firmware from Omnilink China cloud, or deploied the latest firmware on you cloud. Please contact Omnilink China sales(sales@Omnilink Chinacn.com) and she/he will send you a detail document.
+ If you want to known more details about getting the Device's latest firmware from Omnilink China cloud, or deploied the latest firmware on you cloud. Please contact Omnilink China sales(sales@omnilink.cc) and she/he will send you a detail document.
 
   Also for more detail nordic DFU library, please refer to
 https://github.com/NordicSemiconductor/IOS-Pods-DFU-Library
